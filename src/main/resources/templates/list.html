@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Listagem de tarefas</title>
+</head>
+<header th:replace="navbar.html"></header>
+
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome da Tarefa</th>
+        <th scope="col">Data de execução</th>
+        <th scope="col">Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-th-each="task : ${tasks}">
+        <td data-th-text="${task.id}"></td>
+        <td data-th-text="${task.name}"></td>
+        <td data-th-text="${{task.date}}"></td>
+        <td><a th:href="@{'/edit/' + ${task.id}}" class="btn btn-secondary">Editar</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/create" class="btn btn-success">Cadastro</a>
+</body>
+</html>
