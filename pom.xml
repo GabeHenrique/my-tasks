@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.gabe</groupId>
-    <artifactId>layout</artifactId>
+    <artifactId>my-tasks</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>layout</name>
     <description>layout</description>

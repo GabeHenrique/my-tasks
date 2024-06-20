@@ -23,7 +23,7 @@
 #
 # Required ENV vars:
 # ------------------
-#   JAVA_HOME - location of a JDK home dir
+#   JAVA_HOME - location of a JDK viewCreate dir
 #
 # Optional ENV vars
 # -----------------
@@ -71,7 +71,7 @@ esac
 
 if [ -z "$JAVA_HOME" ] ; then
   if [ -r /etc/gentoo-release ] ; then
-    JAVA_HOME=$(java-config --jre-home)
+    JAVA_HOME=$(java-config --jre-viewCreate)
   fi
 fi
 

@@ -1,3 +1,24 @@
 html {
     padding: 10px !important;
 }
+
+.full-height {
+    height: 80vh;
+}
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-header {
+    margin-top: -100px;
+}
+.form-body {
+    margin-top: 100px;
+}
+
+.form-body .form-group {
+    margin-bottom: 20px;
+}
